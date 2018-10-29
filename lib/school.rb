@@ -2,7 +2,7 @@
 require 'pry'
 
 class School
-attr_reader :name, :roster
+  attr_reader :name, :roster
 
   def initialize(name)
     @name = name
@@ -10,7 +10,7 @@ attr_reader :name, :roster
   end
 
   def add_student(student_name, grade)
-    if roster[grade] 
+    if roster[grade]
       roster[grade] << student_name
     else
       roster[grade] = []

@@ -1,3 +1,4 @@
+
 require 'pry'
 
 class School
@@ -9,9 +10,7 @@ attr_reader :name, :roster
   end
 
   def add_student(student_name, grade)
-    # binding.pry
-    # roster[grade] = [student_name]
-    if roster[grade] #does roster have a key of grade yet?
+    if roster[grade] 
       roster[grade] << student_name
     else
       roster[grade] = []
@@ -30,4 +29,15 @@ attr_reader :name, :roster
     end
     sorted
   end
+
+  def initialize(name)
+    @name = name
+    @roster = {}
+  end
+
+  def add_student(student_name, grade)
+    binding.pry
+    roster << grade
+  end
+
 end
